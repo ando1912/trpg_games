@@ -74,12 +74,16 @@ div[tabindex="0"]>div:nth-child(3),
   --border-shadow: 0;
   --font-color: rgb(255, 255, 255);
   --font-color-shadow: 0;
+  --font-color-second: rgb(200,200,200);
+  --font-color-second-shadow: 0;
   --font-color-fail: rgb(245, 0, 87);
   --font-color-fail-shadow: 0;
   --font-color-success: rgb(33, 150, 243);
   --font-color-success-shadow: 0;
   --font-size: 1.5rem;
   --font-shadow: 0;
+  --text-stroke: 0.2px;
+  --text-stroke-color: rgb(0,0,0);
   --image-radius: 0%;
   --width: 500px;
   --line-clamp: 30;
@@ -120,6 +124,7 @@ hr {
   margin: 0px;
 }
 
+/* 画像 */
 .MuiListItemAvatar-root>div {
   width: var(--image-size);
   height: var(--image-size);
@@ -169,6 +174,10 @@ p.MuiTypography-root {
   -webkit-line-clamp: var(--line-clamp);
 }
 
+.MuiTypography-colorTextSecondary {
+  color: var(--font-color-second);
+  text-shadow: var(font-color-second-shadow);
+}
 .MuiTypography-colorPrimary {
   color: var(--font-color-success);
   text-shadow: var(--font-color-success-shadow);
@@ -179,12 +188,24 @@ p.MuiTypography-root {
   text-shadow: var(--font-color-fail-shadow);
 }
 
+.MuiTypography-root {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+/* キャラネームの表示 */
 .MuiListItemText-primary {
   display: block;
-  
+  -webkit-text-stroke: var(--text-stroke) var(--text-stroke-color); 
 }
+
+/* タイムスタンプ削除 */
+.MuiTypography-caption{
+  display: none;
+}
+
 .MuiListItemText-primary,
 .MuiTypography-caption {
-  color: var(--font-color);
+  //color: var(--font-color);
   text-shadow: var(--font-color-shadow);
 }
