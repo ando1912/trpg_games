@@ -14,6 +14,7 @@
   --border:solid var(--border-width) var(--border-color);
   --background-color:white;
   --animation-delay: 0ms;
+  --object-position: 50% 30%;
 }
 
 /**************************
@@ -36,6 +37,8 @@ img[class*=Voice_avatar_] {
   content:var(--image-url);
   height:var(--width) !important;
   width:var(--width) !important;
+  object-fit: cover;
+  object-position: var(--object-position); /* 画像の中心位置(横/縦)*/
   border-radius:50% !important;
   position:absolute;
   left: 0%;
